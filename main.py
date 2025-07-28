@@ -4,6 +4,12 @@ import pandas as pd
 # from helper_functions import llm
 from logics.customer_query_handler import process_user_message
 
+import streamlit as st  
+from helper_functions.utility import check_password  
+
+# Check if the password is correct.  
+if not check_password():  
+    st.stop()
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
